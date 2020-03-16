@@ -1,0 +1,2 @@
+# representationlearning
+word2vec文件用于表示词向量，对字典中的单词进行词向量表示，并且可以进行关系嵌入

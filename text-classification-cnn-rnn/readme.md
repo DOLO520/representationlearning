@@ -27,3 +27,17 @@ run_cnn.py详细说明
 损失函数为交叉熵cross_entropy这是一个均值，它是一个数值。
 accuracy 根据inPut_y和y_pred_cls是否相等得到准确率correct_pred
 输出acc数值
+
+run_rnn代码说明
+
+#词向量映射得到embedding_inputs(每次放多少句话*字数*字的维度)
+
+#2层rnn网络得到run_cell,之后有两个输出_output，_.前者_output为纵向的输出（？*600*128）
+取最后一个时序输出作为最终结果[:,-1,:]这是一个二维的（？*128)
+接着进行全连接层，dropout,relu层
+最后在全连接转化为10分类，最后预测类别输出。
+更新参数，使用交叉熵函数，求平均损失。
+
+
+
+
